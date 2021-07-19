@@ -1,6 +1,8 @@
 IMPORT $;
 
-EXPORT fn_Aggregates(DATASET(RECORDOF($.Persons)) DS, INTEGER FieldName) := FUNCTION
+// EXPORT 
+
+fn_Aggregates(DATASET(RECORDOF($.Persons)) DS, INTEGER FieldName) := FUNCTION
 
     totalPersonsWithoutDependents := COUNT(DS(FieldName = 0));
     sumDependents := SUM(DS, FieldName);
@@ -22,3 +24,5 @@ EXPORT fn_Aggregates(DATASET(RECORDOF($.Persons)) DS, INTEGER FieldName) := FUNC
 
     RETURN d;
 END;
+
+fn_Aggregates($.Persons, $.Persons.DependentCount);
