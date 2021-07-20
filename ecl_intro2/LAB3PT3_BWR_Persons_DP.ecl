@@ -13,3 +13,5 @@ bestRecord := DataPatterns.BestRecordStructure(Half_Persons);
 
 OUTPUT(profileResults, ALL, NAMED('profileResults'));
 OUTPUT(bestRecord, ALL, NAMED('bestRecord'));
+
+// DataPatterns.Profile (inFile, fieldListStr, maxPatterns, maxPatternLen, features, sampleSize, lcbLimit)
