@@ -18,7 +18,10 @@ EXPORT File_NamesPhones := MODULE
   STRING20  LName;
   STRING5   Name_Suffix;
  END;
- EXPORT File := DATASET('~online::xxx::roxie::namephones',Layout,THOR);
- //xxx - your initials
- //add INDEX declarations here
+
+ SHARED Filename := '~online::AM::roxie::namephones'; //AM - your initials
+ EXPORT File := DATASET(Filename, Layout, THOR);
+
+ EXPORT IDX_Lname_Pay_Filename := '~ONLINE::AM::IDX::HalfKeyedPayloadRoxie';
+ EXPORT IDX_Lname_Pay := INDEX(File, {Lname}, {File}, IDX_Lname_Pay_Filename);
 END;

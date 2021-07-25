@@ -13,7 +13,7 @@ EXPORT LAB4_Fetch_Persons_StateLFname(STRING2 s_key, STRING25 l_key, STRING15 f_
 
     validate := cszfile.CSZ_ID IN SetCSZ_Ids;
 
-        // Filter if f_key is empty, since its optional
+    // Filter if f_key is empty, since its optional
     filteredKey :=  IF(
                         f_key = '', 
                         basekey(CSZ_ID IN SetCSZ_Ids, LastName = l_key), 
