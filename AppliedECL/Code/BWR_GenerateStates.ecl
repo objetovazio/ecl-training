@@ -1,4 +1,4 @@
-IMPORT $;
+﻿IMPORT $;
 
 State_Rec := RECORD
   STRING2   State;
